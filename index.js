@@ -5,9 +5,9 @@ module.exports = {
 
   included(appOrAddon) {
     let app = appOrAddon.app || appOrAddon;
+    this._super.included.apply(this, arguments);
     if (!app.__emberBasicDropdownIncludedInvoked) {
       app.__emberBasicDropdownIncludedInvoked = true;
-      this._super.included.apply(this, arguments);
 
       let hasSass = !!app.registry.availablePlugins['ember-cli-sass'];
       let hasLess = !!app.registry.availablePlugins['ember-cli-less'];
