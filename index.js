@@ -4,7 +4,7 @@ module.exports = {
   name: require('./package').name,
 
   included(appOrAddon) {
-    let app = appOrAddon.app || appOrAddon;\
+    let app = appOrAddon.app || appOrAddon;
     this._super.included.apply(this, arguments);
     if (!app.__emberBasicDropdownIncludedInvoked) {
       app.__emberBasicDropdownIncludedInvoked = true;
