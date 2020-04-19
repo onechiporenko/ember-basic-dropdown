@@ -51,8 +51,7 @@ export default class BasicDropdownContent extends Component<Args> {
   }
 
   get animationEnabled(): boolean {
-    let config = getOwner(this).resolveRegistration('config:environment');
-    return config.environment !== 'test';
+    return false;
   }
 
   get style(): SafeString {
