@@ -58,6 +58,7 @@ export default @layout(templateLayout) @tagName('')class BasicDropdownContent ex
   transitionedInClass = 'ember-basic-dropdown--transitioned-in';
   transitioningOutClass = 'ember-basic-dropdown--transitioning-out';
   scrollableAncestors = [];
+  _animationEnabled = false;
 
   // CPs
   @computed
